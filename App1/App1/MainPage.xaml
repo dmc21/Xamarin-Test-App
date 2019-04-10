@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+        <ListView x:Name="EmployeeView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding DisplayName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Add data" Grid.Row="1" Grid.Column="0" BackgroundColor="yellow"/>
+            <Button Text="Update Data" Grid.Row="1" Grid.Column="1" BackgroundColor="yellow"/>
+            <Button Text="Delete data" Grid.Row="1" Grid.Column="2" BackgroundColor="yellow"/>
+            <Button Text="Show info" Grid.Row="1" Grid.Column="3"  BackgroundColor="yellow"/>
+
+
+    </Grid>
+
+
+
+</ContentPage>
